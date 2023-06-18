@@ -1,2 +1,17 @@
 aside.sidebar 
-   p Sidebar
+   a(href="#").logo
+      img(srcSet="./images/logo.png 2x", alt="")
+   ul.menu 
+      - var menu = [{icon: 'home', name: 'Home'}, {icon: 'explore', name: 'Explore Topics'}, {icon: 'playlist', name: 'Playlist'}, {icon: 'subscription', name: 'Subscriptions'}];
+      +menuItem(menu)
+   
+   ul.menu 
+      h3.menu-heading Podcasters
+      - var menu = [{icon: 'dashboard', name: 'Dashboard'}, {icon: 'episode', name: 'Episodes'}, {icon: 'users', name: 'Team'}, {icon: 'user', name: 'Subscribers'}];
+      +menuItem(menu)
+
+   ul.menu 
+      h3.menu-heading Community
+      - var menu = [{icon: 'dashboard', name: 'Leaderboard'}];
+      + menuItem(menu)
+      

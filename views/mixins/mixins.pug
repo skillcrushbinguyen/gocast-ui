@@ -1,0 +1,27 @@
+mixin getIcon(icon)
+   case icon 
+      when 'dashboard'
+         include ../icons/dashboard.pug
+      when 'episode'
+         include ../icons/episode.pug
+      when 'explore'
+         include ../icons/explore.pug
+      when 'home'
+         include ../icons/home.pug
+      when 'playlist'
+         include ../icons/playlist.pug
+      when 'subscription'
+         include ../icons/subscription.pug
+      when 'user'
+         include ../icons/user.pug
+      when 'users'
+         include ../icons/users.pug
+      
+mixin menuItem (menu)
+   each m in menu 
+         li.menu-item 
+            a(href="#").menu-link
+               span.menu-icon
+                  if m.icon 
+                     +getIcon(m.icon)
+               span.menu-text #{m.name}

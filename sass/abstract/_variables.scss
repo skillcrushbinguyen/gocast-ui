@@ -1,2 +1,12 @@
-$font-primary: "IBM Plex Sans", sans-serif;
+$font-primary: "IBM Plex Sans",
+sans-serif;
 $bg-color: white;
+$text-gray: #8494ab;
+$text-black1: #1B1D21;
+$gray1: #E9EEF4;
+
+:root {
+   --primary-h: 248;
+   --primary-s: 57%;
+   --primary-l: 60%;
+}

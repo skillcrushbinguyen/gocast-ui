@@ -1,0 +1,69 @@
+@use '../abstract'as abs;
+
+.sidebar {
+   background-color: #fff;
+   padding: 48px 30px;
+}
+
+.logo {
+   display: block;
+   margin-bottom: 44px;
+}
+
+.menu {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+
+   --gap: 26px;
+
+   &:not(:last-child):after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: abs.$gray1;
+      margin-block: var(--gap);
+   }
+
+   &-heading {
+      padding-left: 20px;
+      margin-bottom: 10px;
+      color: abs.$text-gray;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 146%;
+   }
+
+   &-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.43;
+      color: abs.$text-gray;
+      padding: 8px 20px;
+      border-radius: 12px;
+      // transition: all .1s linear;
+
+      &:hover {
+         /* Gradient */
+         background: linear-gradient(92.29deg, #415ef4 0.33%, #7141ef 28.14%);
+         color: #fff;
+
+         [fill^="#E5"] {
+            fill: white;
+         }
+
+         [fill^="#A5"] {
+            mix-blend-mode: normal;
+            fill: hsla(var(--primary-h), calc(var(--primary-s) + 1%), calc(var(--primary-s) + 16%), 1);
+         }
+
+      }
+   }
+
+   &-icon {
+      flex: 0 0 24px;
+   }
+}
