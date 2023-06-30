@@ -1,0 +1,91 @@
+@use '../abstract'as abs;
+
+.top-bar {
+   padding: 24px 56px;
+   background-color: #fff;
+   @include abs.flexbox((justify: space-between, align: center));
+
+   &-search {
+      background-color: hsla(208, 26%, 95%, 1);
+      padding: 12px 20px;
+      border-radius: 12px;
+      flex: 0 1 360px;
+      @include abs.flexbox((justify: center, align: center, gap: 20px));
+
+
+      .search {
+         &-icon {
+            flex: 0 0 19px;
+         }
+
+         &-input {
+            flex: 1;
+            outline: none;
+            border: none;
+            @include abs.fw('semibold');
+            line-height: 22px;
+            color: abs.$primary;
+            background-color: transparent;
+            caret-color: abs.$primary;
+
+            &::-webkit-input-placeholder {
+               color: abs.$gray2;
+            }
+
+            &::-moz-input-placeholder {
+               color: abs.$gray2;
+            }
+         }
+
+      }
+   }
+
+   &-right {
+      @include abs.flexbox((justify: center, align: center, gap: 24px));
+
+      .button {
+         flex: 0 0 auto;
+
+         &-upload {
+            padding: 12px 16px;
+            border-radius: 8px;
+            background-color: abs.$primary;
+            color: abs.$neutral-01;
+            @include abs.fw('semibold');
+            @include abs.flexbox((justify: center, align: center, gap:6px));
+         }
+
+         &-icon {
+
+            &.new-message {
+               position: relative;
+
+               &:after {
+                  content: '';
+                  background-color: abs.$super-color-2nd;
+                  border-radius: 12px;
+                  border: 2px solid var(--white, #FFF);
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  @include abs.size(12px);
+               }
+
+            }
+         }
+
+         &-avatar {
+            display: block;
+            @include abs.size(48px);
+
+            & img {
+               border-radius: 100rem;
+               @include abs.cover();
+            }
+         }
+      }
+
+
+
+   }
+}

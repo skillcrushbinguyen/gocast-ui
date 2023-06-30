@@ -1,0 +1,33 @@
+@mixin size($width: 0, $height: $width) {
+   width: $width;
+   height: $height;
+}
+
+@mixin cover() {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+@mixin fw($size: 'medium') {
+   @if $size=='medium' {
+      font-weight: 500;
+   }
+
+   @if $size=='semibold' {
+      font-weight: 600;
+   }
+
+   @if $size=='bold' {
+      font-weight: 700;
+   }
+}
+
+@mixin flexbox($option) {
+   display: flex;
+   flex-wrap: map-get($option, "wrap");
+   flex-direction: map-get($option, "direction");
+   justify-content: map-get($option, "justify");
+   align-items: map-get($option, "align");
+   gap: map-get($option, "gap");
+}

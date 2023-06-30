@@ -11,9 +11,7 @@
 }
 
 .menu {
-   display: flex;
-   flex-direction: column;
-   gap: 8px;
+   @include abs.flexbox((direction: column, gap: 8px));
 
    --gap: 26px;
 
@@ -29,22 +27,18 @@
       padding-left: 20px;
       margin-bottom: 10px;
       color: abs.$text-gray;
-      font-weight: 400;
       font-size: 13px;
       line-height: 146%;
    }
 
    &-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.43;
       color: abs.$text-gray;
       padding: 8px 20px;
       border-radius: 12px;
-      // transition: all .1s linear;
+      font-size: 14px;
+      line-height: 1.43;
+      @include abs.fw();
+      @include abs.flexbox((align: center, gap: 10px));
 
       &:hover {
          /* Gradient */

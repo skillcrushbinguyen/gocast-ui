@@ -1,2 +1,18 @@
 .top-bar
-   
+   .top-bar-search 
+      img(srcSet="./images/icons/search.svg 2x", alt="search icon").search-icon
+      input(type="text", name="search-input", placeholder="Search 2+ million podcasts and listeners").search-input
+   .top-bar-right 
+      a(href="#", class="button button-upload")
+         span.button-img
+            +getIcon('cloud-upload')
+         span.button-text Upload 
+      a(href="#", class="button button-icon new-message")
+         img(src="./images/icons/message.svg", alt="message icon").button-img
+      a(href="#", class="button button-icon")
+         img(src="./images/icons/notification.svg", alt="notification icon").button-img
+      a(href="#", class="button button-avatar")
+         img(src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60", alt="avatar").button-img
+
+
+
